@@ -27,7 +27,7 @@ function getUserById(id) {
   return getDB().then((db) => {
     const promise = new Promise((resolve, reject) => {
       db.collection('users')
-        .findOne({_id: ObjectID(id) }, (findError, user) => {
+        .findOne({ _id: ObjectID(id) }, (findError, user) => {
           if (findError) reject(findError);
           db.close();
           resolve(user);
@@ -37,11 +37,11 @@ function getUserById(id) {
   });
 }
 
-function getUserByUsename(username) {
+function getUserByUsername(username) {
   return getDB().then((db) => {
     const promise = new Promise((resolve, reject) => {
       db.collection('users')
-        .findOne({ username }, (findErrorm user) => {
+        .findOne({ username }, (findError, user) => {
           if (findError) reject(findError);
           db.close();
           resolve(user);
@@ -55,4 +55,4 @@ module.exports = {
   createUser,
   getUserById,
   getUserByUsername,
-}
+};
