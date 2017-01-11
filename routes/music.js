@@ -5,11 +5,17 @@ const { getFavorites, searchMusic, deleteFavorites, saveFavorite } = require('..
 
 router.get('/', authenticate, getFavorites, (req, res) => {
   res.render('music/index', {
+    user: res.user,
+    results: results || [],
+    favorites: res.favorites || [],
   });
 });
 
 router.post('/search', authenticate, searchMusic, (req, res) => {
   res.render('music/index', {
+    user: res.user,
+    results: res.results || [],
+    favorites: res.favorites || [],
   });
 });
 
