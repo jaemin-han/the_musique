@@ -11,7 +11,7 @@ const methodOverride = require('method-override');
 // Routes folder
 const indexRouter = require('./routes/index.js');
 const authRouter = require('./routes/auth.js');
-// const musicRouter = require('./routes/music.js');
+const musicRouter = require('./routes/music.js');
 const usersRouter = require('./routes/users.js');
 
 const app = express();
@@ -28,6 +28,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Parse application/json
 app.use(bodyParser.json());
 
+app.use(methodOverride('_method'));
+
 // Read the cookies sent over from the browser
 app.use(cookieParser());
 
@@ -43,7 +45,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes -- subpages
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
-// app.use('/music', musicRouter);
+app.use('/music', musicRouter);
 app.use('/users', usersRouter);
 
 // Port listening for connections

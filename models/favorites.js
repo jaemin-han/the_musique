@@ -7,7 +7,7 @@ function getFavorites(req, res, next) {
     db.collection('favorites')
       .find({ userId: { $eq: req.session.userID } })
       .toArray((toArrErr, data) => {
-        if(toArray) return next(toArrErr);
+        if(toArrErr) return next(toArrErr);
         res.favorites = data;
         db.close();
         next();
@@ -27,7 +27,7 @@ function saveFavorite(req, res, next) {
   // Add userId to insertObj
   insertObj.favorite.userId = req.session.userId;
 
-  getDB.then((db) => {
+  getDB().then((db) => {
     db.collection('favorite')
       .insert(insertObj.favorite, (insertErr, result) => {
         if (insertErr) return next(insertErr);

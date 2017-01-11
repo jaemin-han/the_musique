@@ -5,7 +5,7 @@ const API_URL = 'https://itunes.apple.com/search?';
 function searchMusic(req, res, next) {
   fetch(`${API_URL}term=${req.body.searchTerm}&entity=album&medium=music`)
   .then(r => r.json())
-  .then((album) => {
+  .then((albums) => {
     res.results = albums.results;
     next();
   })
