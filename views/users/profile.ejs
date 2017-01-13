@@ -8,10 +8,53 @@
   </head>
 
   <body>
-    <h1>Welcome! <%= user.username %></h1>
+    <h1 class="titles">The Musique</h1>
+    <h1>Welcome, <%= user.username %>!</h1>
     <a href="/music">Search Music Now</a>
     <form action="/auth?_method=DELETE" method="post">
       <input type="submit" value="Logout">
     </form>
+
+    <section class="grid four-columns">
+      <ul>
+        <li>
+          <a href="">
+            <div class="image-container" style="background-image: url('../../image/dj.jpg')">
+            </div>
+            <div class="text-container">
+              <h3>EDM/Dance</h3>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="image-container" style="background-image: url('../../image/jazz.jpg')">
+            </div>
+            <div class="text-container">
+              <h3>Jazz</h3>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="image-container" style="background-image: url('../../image/classical.jpg')">
+            </div>
+            <div class="text-container">
+              <h3>Classical</h3>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="image-container" style="background-image: url('../../image/rock.jpg')">
+            </div>
+            <div class="text-container">
+              <h3>Rock</h3>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
   </body>
 </html>
