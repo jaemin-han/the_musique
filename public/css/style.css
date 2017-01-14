@@ -214,6 +214,53 @@ p a:link {
 
 
 /*Profile Page*/
+#profile_background {
+  background: url(../../image/background.jpg) no-repeat fixed; /*image from https://unsplash.com/ - commercial use okay*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  position: absolute;
+}
+
+#header {
+  /*position: relative;*/
+  display: flex;
+  justify-content: space-between;
+  /*float: left;*/
+}
+
+#delete {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  padding: none;
+  margin: 20px 20px 0 0;
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+}
+
+#message {
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+#message a {
+  color: white;
+  font-size: 30px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background: rgba(0,0,0,0.7);
+}
+
+#message a:hover {
+  color: tomato;
+}
+
 .grid ul {
   margin: 0;
   padding: 0;
@@ -237,6 +284,8 @@ p a:link {
   height: 400px;
   background-size: cover;
   background-position: center;
+  background-color: black;
+  border: 1px solid white;
 }
 
 .grid ul li a .image-container img {
@@ -245,12 +294,15 @@ p a:link {
 }
 
 .grid ul li a .text-container {
-  background: white;
-  width: 100%;
+/*  background: black;*/
+  width: 81.3%;
   padding: 20px;
+  margin: 1px;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 10px;
+  background: rgba(0,0,0,0.7);
+  text-align: center;
+  /*left: 0;*/
 }
 
 .grid ul li a .text-container h3 {
@@ -267,7 +319,7 @@ p a:link {
 }
 
 .grid.four-columns ul li:nth-child(1) .text-container, .grid.four-columns ul li:nth-child(3) .text-container {
-  top: 0;
+  top: 10px;
   bottom: auto;
 }
 

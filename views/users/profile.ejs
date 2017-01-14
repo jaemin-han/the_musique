@@ -8,12 +8,17 @@
   </head>
 
   <body>
-    <h1 class="titles">The Musique</h1>
-    <h1>Welcome, <%= user.username %>!</h1>
-    <a href="/music">Search Music Now</a>
-    <form action="/auth?_method=DELETE" method="post">
-      <input type="submit" value="Logout">
-    </form>
+  <div class="container" id="profile_background">
+    <div id="header">
+      <h1 class="titles">The Musique</h1>
+      <form action="/auth?_method=DELETE" method="post">
+        <input type="submit" id="delete" value="Logout">
+      </form>
+    </div>
+    <div id="message">
+      <h1>Welcome, <%= user.username %>!</h1>
+      <a href="/music">Search Music Now</a>
+    </div>
 
     <section class="grid four-columns">
       <ul>
@@ -55,6 +60,6 @@
         </li>
       </ul>
     </section>
-
+  </div>
   </body>
 </html>
