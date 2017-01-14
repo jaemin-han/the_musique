@@ -11,7 +11,7 @@ router.get('/', authenticate, getFavorites, (req, res) => {
   });
 });
 
-router.post('/search', authenticate, searchMusic, (req, res) => {
+router.post('/search', authenticate, searchMusic, getFavorites, (req, res) => {
   res.render('music/index', {
     user: res.user,
     results: res.results || [],
@@ -19,7 +19,7 @@ router.post('/search', authenticate, searchMusic, (req, res) => {
   });
 });
 
-router.delete('/favorite/:id', deleteFavorites, (req, res) => {
+router.delete('/favorites/:id', deleteFavorites, (req, res) => {
   res.redirect('/music');
 });
 

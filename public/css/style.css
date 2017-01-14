@@ -328,3 +328,54 @@ p a:link {
   float: left;
 }
 
+/*Music Index Page*/
+#main-header {
+  text-align: center;
+  color: tomato;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#search {
+  height: 50px;
+  width: 300px;
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#search-submit {
+  height: 55px;
+  width: 70px;
+  border: none;
+}
+
+.index-container {
+  margin: 15px;
+}
+
+.fave, .search-results {
+/*  padding: 10px 5px;
+  background-color: tomato;*/
+  text-align: center;
+  display: inline-block;
+  border: 1px solid white;
+  height: 300px!;
+  width: 200px!;
+/*  height: 100%;
+  width: auto;*/
+  padding: 20px;
+  margin: 20px 10px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+}
+
+#index-background {
+  background: url(../../image/index.jpg) no-repeat fixed; /*image from https://unsplash.com/ - commercial use okay*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  position: absolute;
+}
+
+.logo {
+  font-family: 'Permanent Marker', cursive;
+}

@@ -10,9 +10,9 @@ const methodOverride = require('method-override');
 
 // Routes folder
 const indexRouter = require('./routes/index.js');
-const authRouter = require('./routes/auth.js');
-const musicRouter = require('./routes/music.js');
-const usersRouter = require('./routes/users.js');
+const authRouter = require('./routes/auth');
+const musicRouter = require('./routes/music');
+const usersRouter = require('./routes/users');
 
 const app = express();
 const SECRET = 'music3000';
@@ -28,6 +28,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Parse application/json
 app.use(bodyParser.json());
 
+// Middleware for method override
 app.use(methodOverride('_method'));
 
 // Read the cookies sent over from the browser

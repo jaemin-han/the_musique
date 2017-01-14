@@ -5,14 +5,14 @@ function getFavorites(req, res, next) {
   // Find all favorites based on your userId
   getDB().then((db) => {
     db.collection('favorites')
-      .find({ userId: { $eq: req.session.userID } })
+      .find({ userId: { $eq: req.session.userId } })
       .toArray((toArrErr, data) => {
-        if(toArrErr) return next(toArrErr);
+        if (toArrErr) return next(toArrErr);
         res.favorites = data;
         db.close();
         next();
       });
-      return false;
+    return false;
   });
   return false;
 }
@@ -20,9 +20,8 @@ function getFavorites(req, res, next) {
 function saveFavorite(req, res, next) {
   // Create all of req.body into insertObj
   const insertObj = {};
-
   // Copy all of req.body into insertObj
-  for(key in req.body) {
+  for (key in req.body) {
     insertObj[key] = req.body[key];
   }
   // Add userId to insertObj
@@ -36,7 +35,7 @@ function saveFavorite(req, res, next) {
         db.close();
         next();
       });
-      return false;
+    return false;
   });
   return false;
 }
@@ -53,7 +52,7 @@ function deleteFavorites(req, res, next) {
         db.close();
         next();
       });
-      return false;
+    return false;
   });
   return false;
 }
