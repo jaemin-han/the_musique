@@ -368,14 +368,26 @@ p a:link {
   color: white;
 }
 
-#index-background {
-  background: url(../../image/index.jpg) no-repeat fixed; /*image from https://unsplash.com/ - commercial use okay*/
-  -webkit-background-size: cover;
+/*#index-background {*/
+/*  background: url(../../image/index.jpg) no-repeat fixed;*/ /*image from https://unsplash.com/ - commercial use okay*/
+/*  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   position: absolute;
+}*/
+
+.logo, #favorites-container h1, #search-results-container h1 {
+  font-family: 'Permanent Marker', cursive;
+  color: white;
 }
 
-.logo {
+.index-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.index-header a {
   font-family: 'Permanent Marker', cursive;
+  color: white;
+  margin: 20px 20px 0 0;
 }

@@ -7,10 +7,14 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body style="background: url(../../image/index2.jpg) no-repeat fixed;">
   <div id="index-background">
     <div class="index-container">
-    <h1 class="logo">The Musique</h1>
+
+    <div class="index-header">
+      <h1 class="logo">The Musique</h1>
+      <a href="/users/profile">Home</a>
+    </div>
 
     <div id="main-header">
       <h1 class="h1"><%= user.username %>, search for your favorite albums!</h1>
@@ -50,7 +54,7 @@
         </div>
       <% }) %>
     </div>
-    <a href="/users/profile">Home</a>
+
     </div>
   </div>
 </body>
