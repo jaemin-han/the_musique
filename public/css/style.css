@@ -368,13 +368,9 @@ p a:link {
   color: white;
 }
 
-/*#index-background {*/
-/*  background: url(../../image/index.jpg) no-repeat fixed;*/ /*image from https://unsplash.com/ - commercial use okay*/
-/*  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  position: absolute;
-}*/
+#index-background {
+  margin-left: 15px;
+}
 
 .logo, #favorites-container h1, #search-results-container h1 {
   font-family: 'Permanent Marker', cursive;
