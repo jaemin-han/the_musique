@@ -8,58 +8,58 @@
   </head>
 
   <body>
-  <div class="container" id="profile_background">
-    <div id="header">
-      <h1 class="titles">The Musique</h1>
-      <form action="/auth?_method=DELETE" method="post">
-        <input type="submit" id="delete" value="Logout">
-      </form>
-    </div>
-    <div id="message">
-      <h1>Welcome, <%= user.username %>!</h1>
-      <a href="/music">Search Music Now</a>
-    </div>
+    <div class="container" id="profile_background">
+      <div id="header">
+        <h1 class="titles">The Musique</h1>
+        <form action="/auth?_method=DELETE" method="post">
+          <input type="submit" id="delete" value="Logout">
+        </form>
+      </div>
+      <div id="message">
+        <h1>Welcome, <%= user.username %>!</h1>
+        <a href="/music">Search Music Now</a>
+      </div>
 
-    <section class="grid four-columns">
-      <ul>
-        <li>
-          <a href="">
-            <div class="image-container" style="background-image: url('../../image/dj.jpg')">
-            </div>
-            <div class="text-container">
-              <h3>EDM/Dance</h3>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <div class="image-container" style="background-image: url('../../image/jazz.jpg')">
-            </div>
-            <div class="text-container">
-              <h3>Jazz</h3>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <div class="image-container" style="background-image: url('../../image/classical.jpg')">
-            </div>
-            <div class="text-container">
-              <h3>Classical</h3>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <div class="image-container" style="background-image: url('../../image/rock.jpg')">
-            </div>
-            <div class="text-container">
-              <h3>Rock</h3>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </section>
-  </div>
+      <section class="grid four-columns">
+        <ul>
+          <li>
+            <a href="">
+              <div class="image-container" style="background-image: url('../../image/dj.jpg')">
+              </div>
+              <div class="text-container">
+                <h3>EDM/Dance</h3>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="image-container" style="background-image: url('../../image/jazz.jpg')">
+              </div>
+              <div class="text-container">
+                <h3>Jazz</h3>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="image-container" style="background-image: url('../../image/classical.jpg')">
+              </div>
+              <div class="text-container">
+                <h3>Classical</h3>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="image-container" style="background-image: url('../../image/rock.jpg')">
+              </div>
+              <div class="text-container">
+                <h3>Rock</h3>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
   </body>
 </html>
